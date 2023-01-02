@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+
+  font-family: sans-serif;
+}
+
+.word {
+  display: flex;
+}
+
+.letter {
+  position: relative;
+  right: 50%;
+  margin: 0.05em;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  order: 2;
+  width: 40px;
+  height: 40px;
+  background: #555;
+  color: #fff;
+}
+
+.pivot {
+  background: red;
+}
+
+.pivot,
+.pivot ~ .letter {
+  order: 1;
+  left: 50%;
+}
+
+.word .letter:last-child {
+  margin-right: auto;
+}
